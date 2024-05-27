@@ -45,8 +45,10 @@ jobs:
         python-version: "3.10"
     - name: Run Python App
       run: python main.py
+      
     - name: Save output
       run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
+      
     - uses: actions/upload-artifact@v4
         with:
           name: python-app-artc
