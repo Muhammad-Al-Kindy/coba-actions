@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -34,11 +34,12 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-  
+
   runapp:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -46,10 +47,10 @@ jobs:
     - name: Run Python App
       run: python main.py
       
-    - name: Save output
+    - name: Save Output
       run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
-      
+
     - uses: actions/upload-artifact@v4
-        with:
-          name: python-app-artc
-          path: output.txt
+      with:
+        name: python-app-artc
+        path: output.txt
