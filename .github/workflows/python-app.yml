@@ -53,7 +53,6 @@ jobs:
     
     - name: Copy Server App
       run: Copy-Item -Path server.py -Destination 'D:\Muhammad_Al_Kindy\sm6\Version_control\Hasil\server.py'
-      shell: pwsh
 
     # - uses: actions/upload-artifact@v4
     #   with:
