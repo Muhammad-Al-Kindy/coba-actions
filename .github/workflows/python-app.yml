@@ -52,7 +52,8 @@ jobs:
     #   run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
     
     - name: Copy Server App
-      run: cp server.py /This PC/D:/Muhammad_Al_Kindy/sm6/Version_control/Hasil/server.py
+      run: Copy-Item -Path server.py -Destination 'D:\Muhammad_Al_Kindy\sm6\Version_control\Hasil\server.py'
+      shell: pwsh
 
     # - uses: actions/upload-artifact@v4
     #   with:
