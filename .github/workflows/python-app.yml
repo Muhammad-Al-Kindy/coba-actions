@@ -52,7 +52,7 @@ jobs:
     #   run: echo "${{ steps.run_python_app.outputs.stdout }}" > output.txt
     
     - name: Copy Server App
-      run: cp server.py /D:/Muhammad_Al_Kindy/sm6/Version_control/Hasil/server.py
+      run: cp server.py /This PC/D:/Muhammad_Al_Kindy/sm6/Version_control/Hasil/server.py
 
     # - uses: actions/upload-artifact@v4
     #   with:
